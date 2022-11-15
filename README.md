@@ -6,13 +6,15 @@ npm install --save
 
 ### Database Connection :- 
 ===================================
-Create a .env file with below credential :
+1. Create a database in pgAdmin and restore drudData.sql file.
 
-user: "ENTER_YOUR_USERNAME",
-host: "localhost",
-database: testing ,
-password: 'ENTER_PASSWORD', 
-port: 5432,
+2. Create a .env file with below credential :
+
+    user: "YOUR_USERNAME",
+    host: "localhost",
+    database: "YOUR_DATABASE_NAME" ,
+    password: 'YOUR_PASSWORD', 
+    port: 5432,
 
 ====================================
 
