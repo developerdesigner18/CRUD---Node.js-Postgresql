@@ -38,7 +38,7 @@ exports.findAllOrders = async (req, res) => {
   FROM "OrderProductMap" 
   JOIN "Orders" ON "Orders"."id" = "OrderProductMap"."orderid"`)
     .then((results)=>{    
-      res.status(200).json({ code: 200, message:results.rows});
+      res.status(200).json({ code: 200, orders:results.rows});
     }).catch((error)=>{
       res.status(404).json({code:404,message:error.message})
     })
@@ -47,7 +47,7 @@ exports.findAllOrders = async (req, res) => {
 exports.update = (req, res) => {
   const id = req.params.id;
   pool.query(
-    `UPDATE public."Orders" SET description = '${req.body.description}' WHERE id = '${id}'`
+    `UPDATE public."Orders" SET description = '${req.body.orderDescription}' WHERE id = '${id}'`
   ).then((results)=>{
     pool.query(
       `UPDATE public."OrderProductMap" SET productid = ARRAY[${req.body.productId}] WHERE orderid = '${id}'`
