@@ -4,13 +4,14 @@
 npm install --save
 ===================================
 
-### Database Connection :-
+### Database Connection :- 
 ===================================
+Create a .env file with below credential :
 
-user: process.env.USER, <--- Username
+user: "ENTER_YOUR_USERNAME",
 host: "localhost",
-database: process.env.DB , <--- Database Name
-password: process.env.PASSWORD, <--- Password
+database: testing ,
+password: 'ENTER_PASSWORD', 
 port: 5432,
 
 ====================================
